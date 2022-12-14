@@ -5,8 +5,8 @@ pipeline {
 
         stage('Clean') {
             steps {
-              bat "set path=%path%;C:\\Program Files\\apache-maven-3.8.6\\bin"
-              bat "mvn clean"
+              set path=%path%;C:\\Program Files\\apache-maven-3.8.6\\bin
+              mvn clean
             }
         }
 

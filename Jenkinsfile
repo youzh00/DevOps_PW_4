@@ -5,19 +5,19 @@ pipeline {
 
         stage('Clean') {
             steps {
-              powershell.exe -Command "mvn clean"
+              sh "mvn clean"
             }
         }
 
         stage('Test') {
             steps {
-              powershell.exe -Command "mvn test"
+              sh "mvn test"
             }
         }
 
         stage('Deploy') {
             steps {
-              powershell.exe -Command "mvn package"
+              sh "mvn package"
               }
         }
 
